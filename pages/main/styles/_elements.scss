@@ -1,0 +1,168 @@
+@import "_variables.scss";
+a{
+    color: red;
+}
+
+button {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
+.button-primary {
+    width: 157px;
+    height: 52px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    background: $color-primary;
+    &:hover {
+        background: #fddcc4;
+    }
+}
+.button-wrapper {
+    width: 103%;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    @media (max-width: $breakpoint-mobile) {
+        position: static;
+        width: 190px;       
+    }
+
+    .button-arrow {
+        border: 2px solid $color-primary;
+        box-sizing: border-box;
+        border-radius: 100px;
+        width: 52px;
+        height: 52px;
+        background: none;
+        &.invalid {
+            border: 2px solid $color-dark-s;
+            color: $color-dark-s;
+            &:hover {
+                background: none;
+            }
+        }
+        // position: absolute;
+        &:hover{
+            background-color: $color-primary-light;
+        }
+        svg {
+            width: 14px;
+            height: 6px;
+        }
+    }
+}
+
+.button-round {
+    border: 2px solid $color-primary;
+    box-sizing: border-box;
+    border-radius: 100px;
+    background: none;
+    width: 52px;
+    height: 52px;
+    &.invalid {
+        border: 2px solid $color-dark-s;
+        color: $color-dark-s;
+        &:hover {
+            background: none;
+        }
+    }
+    &.current {
+        background: $color-primary;
+    }
+    &:hover {
+        background: $color-primary-light;
+    }
+}
+
+
+.hamburger {
+    width: 30px;
+    height: 30px;
+    border: 1px solid violet;
+    display: none;
+    @media (max-width: calc(#{$breakpoint-mobile + 130px})) {
+        display: flex;
+        z-index: 2;
+    }
+
+    &.active {
+        .wrapper {
+            transform: rotate(-90deg);
+        }
+    }
+    .wrapper {
+        width: 100%;
+        height: 22px;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+        .line {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: $color-primary;
+        }
+    }
+}
+
+.modal-window{
+    width: 75%;
+    height: 500px;
+    position: absolute;
+    background: $color-light-s;
+    display: none;
+    // display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &.open{
+        display: flex;
+    }
+    .image{
+        // flex: 1 1 300px;
+        width: 40%;
+        // height: 500px;
+        img{
+            width: 100%;
+            height: 100%
+        }
+    }
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        width: 40%;
+        align-items: start;
+        justify-content: space-around;
+        ul{
+            padding-left: 20px;
+            li{
+                &::marker{
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+    .button-round{
+        position: absolute;
+        width: 52px;
+        height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: -45px;
+        top: -45px;
+        svg{
+            width: 12px;
+            height: 12px;
+        }
+    }
+}

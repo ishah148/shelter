@@ -1,0 +1,76 @@
+.donation {
+    padding: 80px 20px;
+    height: 462px;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    background: $color-light-l;
+    @media (max-width: $breakpoint-tablet) {
+        min-height: 783px;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 60px;
+        // gap: 18px;
+        justify-content: space-around;
+        gap: 0;
+    }
+    @media (max-width: $breakpoint-mobile) {
+        padding: 42px 20px;
+        justify-content: start;
+        gap: 36px;
+        height: auto;
+        min-height: auto;
+    }
+
+    img {
+        padding-top: 10px;
+        @media (max-width: $breakpoint-mobile) {
+            // padding-top: 40px;
+            width: 260px;
+            height: 135px;
+        }
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 380px;
+        height: 282px;
+        gap: 20px;
+        @media (max-width: $breakpoint-tablet) {
+            // width: 100%;
+            // justify-content: space-around;
+            // gap: 0;
+        }
+        @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+            gap: 23px;
+        }
+        .credit-card {
+            width: 349px;
+            height: 43px;
+            background: $color-primary;
+            border-radius: 9px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            // padding: 10px 15px;
+            @media (max-width: $breakpoint-mobile) {
+                width: 100%;
+            }
+
+            .card-svg {
+                width: 30px;
+                height: 23px;
+            }
+        }
+
+        p {
+            margin: 0;
+            @media (max-width: $breakpoint-mobile) {
+                text-align: justify;
+            }
+        }
+    }
+}
