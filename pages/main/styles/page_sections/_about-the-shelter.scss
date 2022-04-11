@@ -1,0 +1,68 @@
+.about-the-shelter {
+    max-width: var(--primary-width);
+    min-height: 588px;
+    display: flex;
+    justify-content: center;
+    gap: 125px;
+    flex-direction: row;
+    align-items: center;
+    background: #ffffff;
+    @media (max-width: $breakpoint-tablet) {
+        flex-direction: column-reverse;
+        padding-top: 80px;
+        gap: 80px;
+        min-height: 1048px;
+        justify-content: flex-end;
+    }
+    @media (max-width: $breakpoint-mobile) {
+        padding: 42px 10px;
+        min-height: auto;
+        gap: 42px;
+        // align-items: center;
+    }
+
+    .backgroud-img {
+        width: 300px;
+        height: 408px;
+        background: url(../../../assets/images/about-pets.png);
+        background-repeat: no-repeat;
+        @media (max-width: $breakpoint-mobile) {
+            width: 260px;
+            height: 353px;
+            background-size: 260px 353px;
+        }
+    }
+
+    .content {
+        width: 430px;
+        display: flex;
+        flex-direction: column;
+        @media (min-width: $breakpoint-mobile) {
+            // height: 380px;
+            height: 396px;
+            // justify-content: space-between;
+            justify-content: flex-start;
+            gap: 24px;
+        }
+        @media (max-width: $breakpoint-tablet) {
+            gap: 25px;
+        }
+        @media (max-width: $breakpoint-mobile) {
+            gap: 23px;
+            h3 {
+                text-align: center;
+            }
+        }
+
+        p {
+            margin: 0;
+            @media (max-width: $breakpoint-mobile) {
+                text-align: justify;
+                padding: 0px 15px;
+            }
+        }
+        @media (max-width: $breakpoint-mobile) {
+            width: auto;
+        }
+    }
+}

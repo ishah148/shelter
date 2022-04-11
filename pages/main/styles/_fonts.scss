@@ -1,0 +1,135 @@
+@import "_variables.scss";
+%header-default {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    // padding: 0;
+}
+
+.logo-subtitle {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+}
+.logo-title {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #f1cdb3;
+}
+
+h2 {
+    @extend %header-default;
+    font-size: 44px;
+    line-height: 130%;
+    color: #545454;
+    @media (max-width: $breakpoint-mobile) {
+        font-size: 25px;
+        letter-spacing: 0.06em;
+    }
+}
+h3 {
+    @extend %header-default;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+    @media (max-width: $breakpoint-mobile) {
+        font-size: 25px;
+        text-align: center;
+    }
+}
+h4 {
+    @extend %header-default;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    @media (max-width: $breakpoint-mobile) {
+        font-size: 15px;
+        line-height: 110%;
+    }
+}
+h5 {
+    @extend %header-default;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    @media (max-width: $breakpoint-mobile) {
+        letter-spacing: 0;
+        text-align: center;
+    }
+}
+.paragraph-l {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #4c4c4c;
+    @media (max-width: $breakpoint-mobile) {
+        max-width: 320px;
+        height: auto;
+    }
+}
+
+.paragraph-s {
+    font-family: "Arial";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #b2b2b2;
+}
+.donation-description {
+    font-family: "Arial";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #b2b2b2;
+}
+
+.pets-card-title {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    margin: 0;
+}
+@mixin paragraph-mobile-menu {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+    color: $color-light-s;
+    &.current {
+        color: $color-dark-s;
+    }
+}
+.paragraph-mobile-menu {
+    @include paragraph-mobile-menu;
+}
+
+
+
+li{
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}

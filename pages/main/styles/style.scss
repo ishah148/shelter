@@ -1,0 +1,50 @@
+@import "_variables.scss";
+@import "_fonts.scss";
+@import "_elements.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --example: green;
+    --primary-width: 1280px;
+    --padding-media: 40px;
+    // --padding-tablet:
+    // --primary-width: 767px;
+}
+
+@media (max-width: $breakpoint-tablet) {}
+
+html {
+    background: $color-light-s;
+    // background: rgb(random(255), random(255), random(255));
+    scroll-behavior: smooth;
+    // width: 100vw;
+}
+
+body {
+    max-width: var(--primary-width);
+    margin: auto;
+
+    @media (max-width: $breakpoint-tablet) {
+        overflow-y: overlay;
+        // width: 100vw;
+        // !!!!!!!
+    }
+}
+
+
+
+// =============== Start Screen ===============
+// @import '/styles/page_sections/.start-screen';
+@import '../styles/page_sections/start-screen';
+@import '../styles/page_sections/about-the-shelter';
+@import '../styles/page_sections/pets';
+@import '../styles/page_sections/help';
+@import '../styles/page_sections/donation';
+@import '../styles/page_sections/footer';
+
+.test-sprite {
+    display: none;
+}
