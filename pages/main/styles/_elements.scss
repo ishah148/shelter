@@ -1,6 +1,7 @@
 @import "_variables.scss";
 a{
-    color: red;
+    text-decoration: none;
+    color: $color-dark-3xl;
 }
 
 button {

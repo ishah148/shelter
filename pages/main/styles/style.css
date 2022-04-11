@@ -140,7 +140,8 @@ li {
 }
 
 a {
-  color: red;
+  text-decoration: none;
+  color: #292929;
 }
 
 button {

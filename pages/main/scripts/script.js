@@ -72,6 +72,7 @@ window.addEventListener('resize', () => {
 })
 
 elems.hamburger.addEventListener('click', function () {
+    // console.log(this)
     this.classList.toggle('active')
     elems.nav.classList.toggle('active')
 })
