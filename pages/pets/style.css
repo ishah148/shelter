@@ -4,7 +4,9 @@ h5, h4, h3, h2 {
   font-weight: 400;
   margin: 0;
 }
-
+img{
+  display: block;
+}
 .logo-subtitle {
   font-family: "Arial";
   font-style: normal;
