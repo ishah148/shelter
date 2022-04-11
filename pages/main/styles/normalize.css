@@ -147,6 +147,7 @@
   
   img {
     border-style: none;
+    display: block;
   }
   
   /* Forms
