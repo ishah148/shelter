@@ -13,8 +13,8 @@
     --header-width:85%;
 }
 html {
-    // background: black;
-    background: rgb(random(255), random(255), random(255));
+    background: $color-light-s;
+    // background: rgb(random(255), random(255), random(255));
 }
 body {
     max-width: var(--primary-width);
