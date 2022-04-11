@@ -47,6 +47,7 @@ elems.buttonClose.onclick = function () {
     console.log('123')
     closeModalWindow();
 }
+
 // =============== ======= ===============
 
 function showCards() {

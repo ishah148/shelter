@@ -140,7 +140,8 @@ li {
 }
 
 a {
-  color: red;
+  text-decoration: none;
+  color: #292929;
 }
 
 button {
@@ -344,12 +345,13 @@ header {
   display: flex;
   justify-content: space-between;
   position: relative;
-  height: 120px;
+  height: 60px;
 }
 header .logo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-self: center;
   width: 186px;
   height: 60px;
   z-index: 2;

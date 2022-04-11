@@ -44,7 +44,11 @@
             flex-direction: column;
             background: $color-light-s;
             gap: 30px;
-
+            &:hover{
+                .button-primary{
+                    background: #fddcc4;
+                }
+            }
             // &:nth-child(3){
             //     display: none;
             // }

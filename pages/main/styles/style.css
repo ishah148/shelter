@@ -647,6 +647,9 @@ body {
   background: #fafafa;
   gap: 30px;
 }
+.pets .content-wrapper .card:hover .button-primary {
+  background: #fddcc4;
+}
 .pets .content-wrapper .card .image {
   width: 270px;
   height: 270px;
