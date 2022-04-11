@@ -304,6 +304,16 @@ button {
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #f1cdb3;
+}
+
 :root {
   --example: green;
   --primary-width: 1280px;
@@ -347,11 +357,13 @@ body {
   display: flex;
   justify-content: space-between;
   position: relative;
+  height: 60px;
 }
 .start-screen header .logo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-self: center;
   width: 186px;
   height: 60px;
   z-index: 2;

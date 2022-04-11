@@ -3,10 +3,12 @@ header {
     display: flex;
     justify-content: space-between;
     position: relative;
+    height: 60px;
     .logo {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-self: center;
         width: 186px;
         height: 60px;
         z-index: 2;

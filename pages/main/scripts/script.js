@@ -23,6 +23,7 @@ const elems = {
 }
 
 showCards()
+updateCardResize();
 // =============== Buttons ===============
 updateButtons(elems.getButtonsLearnMore())
 elems.buttonLeft.onclick = function minusPage() {
@@ -167,6 +168,14 @@ function updateCardResize() {
         showCards()
         updateButtons(elems.getButtonsLearnMore())
     }
+    document.querySelector('.button-wrapper').style.width = document.querySelector('body').offsetWidth - 20 + 'px'
+
+    if (document.querySelector('body').offsetWidth > 570) {
+        document.querySelector('.button-wrapper').style.width = document.querySelector('body').offsetWidth - 80 + 'px'
+    }
+    if (document.querySelector('body').offsetWidth <= 570) {
+        document.querySelector('.button-wrapper').style.width = 190 + 'px'
+    }
 }
 
 function updateButtons(elem) {  //elems.getButtonsLearnMore()
@@ -175,7 +184,7 @@ function updateButtons(elem) {  //elems.getButtonsLearnMore()
         elems.modalWindow.insertAdjacentHTML('afterbegin', getInfoAbout(bt.id))
         showModalWindow()
         console.log(getInfoAbout(bt.id))
-    })  
+    })
 }
 
 function showModalWindow() {
@@ -183,11 +192,11 @@ function showModalWindow() {
     console.log(elems.buttonClose)
     document.querySelector('.modal-window button.button-round').onclick = function () {
         closeModalWindow();
-      }
-      document.querySelectorAll('section *').forEach(i => i.style.opacity = 0.5)
-      document.querySelector('.modal-window').style.opacity = 1;
-      document.querySelector('.pets .content-wrapper').style.opacity = 1;
-      document.querySelectorAll('.modal-window *').forEach(i => i.style.opacity = 1)
+    }
+    document.querySelectorAll('section *').forEach(i => i.style.opacity = 0.5)
+    document.querySelector('.modal-window').style.opacity = 1;
+    document.querySelector('.pets .content-wrapper').style.opacity = 1;
+    document.querySelectorAll('.modal-window *').forEach(i => i.style.opacity = 1)
 }
 function closeModalWindow() {
     elems.modalWindow.classList.remove('open')

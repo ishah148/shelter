@@ -3,14 +3,23 @@
 @import "../main/styles/_elements.scss";
 // @import "../main/styles/page_sections/_start-screen.scss";
 
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #e1e2e1;
+  }
 * {
     box-sizing: border-box;
+    
 }
 :root {
     --example: green;
     scroll-behavior: smooth;
     --primary-width: 1280px;
-    --header-width:85%;
+    --header-width: 85%;
 }
 html {
     background: $color-light-s;
@@ -22,25 +31,23 @@ body {
     margin: auto;
 }
 
-
-.pseudo-header{
+.pseudo-header {
     width: 100%;
     height: 120px;
     display: none;
     background: white;
-    &.header__fixed{
-        display: block
+    &.header__fixed {
+        display: block;
     }
 }
 
 @import "../main/styles/page_sections/_header.scss";
 header {
-
     height: 120px;
     transition-property: height;
     transition-duration: 0.3s;
-    
-    &.header__fixed{
+
+    &.header__fixed {
         position: fixed;
         z-index: 4;
         opacity: 0.96;
@@ -88,15 +95,11 @@ header {
             }
         }
     }
-    .hamburger{
+    .hamburger {
         right: 77px;
         top: 38%;
     }
 }
-
-
-
-
 
 main {
     min-height: 1342px;

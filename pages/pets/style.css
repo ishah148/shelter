@@ -300,6 +300,15 @@ button {
   height: 12px;
 }
 
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #e1e2e1;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -308,7 +317,7 @@ button {
   --example: green;
   scroll-behavior: smooth;
   --primary-width: 1280px;
-  --header-width:85%;
+  --header-width: 85%;
 }
 
 html {
@@ -335,6 +344,7 @@ header {
   display: flex;
   justify-content: space-between;
   position: relative;
+  height: 120px;
 }
 header .logo {
   display: flex;
