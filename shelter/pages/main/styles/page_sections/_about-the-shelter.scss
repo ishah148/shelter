@@ -10,16 +10,16 @@
     @media (max-width: $breakpoint-tablet) {
         flex-direction: column-reverse;
         padding-top: 80px;
-        gap: 80px;
+        gap: 66px;
         min-height: 1048px;
         justify-content: flex-end;
     }
-    @media (max-width: $breakpoint-mobile) {
-        padding: 42px 10px;
-        min-height: auto;
-        gap: 42px;
-        // align-items: center;
-    }
+    // @media (max-width: $breakpoint-mobile) {
+    //     padding: 42px 10px;
+    //     min-height: auto;
+    //     gap: 42px;
+    //     // align-items: center;
+    // }
 
     .backgroud-img {
         width: 300px;

@@ -18,8 +18,7 @@
     }
 
     // @import "page_sections/_header.scss";
-    @import 'header'; 
-    
+    @import "header";
 
     .content-wrapper {
         display: flex;
@@ -41,6 +40,7 @@
             @media (max-width: $breakpoint-mobile) {
                 width: 100%;
                 text-align: center;
+                align-items: center;
             }
             h2 {
                 color: white;
@@ -49,6 +49,11 @@
             }
             p {
                 color: $color-dark-s;
+            }
+            form {
+                @media (max-width: $breakpoint-tablet) {
+                    align-self: center;
+                }
             }
             button {
                 margin-top: 7px;

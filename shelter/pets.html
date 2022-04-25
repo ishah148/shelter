@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pages/pets/style.css">
+    <title>Pets</title>
+</head>
+
+<body>
+    <div class="psevdo-nav"></div>
+    <div class="pseudo-header"></div>
+    <header>
+        <h1 class="logo" onclick="window.location.href='index.html'">
+
+            <p class="logo-title">Cozy House</p>
+            <p class="logo-subtitle">Shelter for pets in Boston</p>
+        </h1>
+
+        <nav>
+            <p class="paragraph-l"><a href="index.html">About the shelter</a></p>
+            <p class="paragraph-l current-page">Our pets</p>
+            <p class="paragraph-l"><a href="index.html#help"> Help the shelter</a></p>
+            <p class="paragraph-l"><a href="#footer">Contacts</a></p>
+        </nav>
+        <div class="hamburger">
+            <div class="wrapper">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="pets">
+        <h3>Our friends who <br>
+            are looking for a house</h3>
+        <section class="content-wrapper" id="donation">
+            <!-- My cards -->
+            <div class="modal-window">
+                <div class="image">
+                    <img src="assets/images/pets-jennifer.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="name-wrapper">
+                        <h3>Jennifer</h3>
+                        <h4>Dog - Labrador</h4>
+                    </div>
+                    <h5>Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever
+                        home. This girl really enjoys being able to go outside to run and play, but won't hesitate
+                        to play up a storm in the house if she has all of her favorite toys.</h5>
+                    <div class="list">
+                        <ul>
+                            <li><b>Age:</b> 2 months</li>
+                            <li><b>Inoculations:</b> none</li>
+                            <li><b>Diseases:</b> none</li>
+                            <li><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="button-round">
+                    <svg>
+                        <use xlink:href="assets/icons/arrow.svg#cross"></use>
+                    </svg>
+                </button>
+            </div>
+        </section>
+        <div class="navigation">
+            <button class="button-round invalid rewind-left">
+                <h4>&lt;&lt;</h4>
+            </button>
+            <button class="button-round left invalid">
+                <h4>&lt;</h4>
+            </button>
+            <button class="button-round current">
+                <h4>1</h4>
+            </button>
+            <button class="button-round right">
+                <h4>&gt;</h4>
+            </button>
+            <button class="button-round rewind-right">
+                <h4>&gt;&gt;</h4>
+            </button>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="contacts">
+
+            <h3>For questions and suggestions</h3>
+
+            <a class="mail" href="mailto:mail@shelter.com">
+                <svg class="contacts-svg">
+                    <use xlink:href="assets/icons/sprite_contacts.svg#icon-email"></use>
+                </svg>
+                <h4>email@shelter.com</h4>
+            </a>
+
+            <a class="phone" href="tel:+375259041736 ">
+                <svg class="contacts-svg">
+                    <use xlink:href="assets/icons/sprite_contacts.svg#icon-phone"></use>
+                </svg>
+                <h4>+13 674 567 75 54</h4>
+            </a>
+        </div>
+        <!-- =============== =============== -->
+        <div class="location">
+            <h3>We are waiting for your visit</h3>
+            <a class="location-data" href="https://goo.gl/maps/LfTkuMVKLehynSgf8">
+                <svg class="contacts-svg">
+                    <use xlink:href="assets/icons/sprite_contacts.svg#location"></use>
+                </svg>
+                <h4>1 Central Street, Boston <br> (entrance from the store)</h4>
+            </a>
+
+            <a class="location-data" href="https://goo.gl/maps/XvFvp1GbRFPiyE937">
+                <svg class="contacts-svg">
+                    <use xlink:href="assets/icons/sprite_contacts.svg#location"></use>
+                </svg>
+                <h4>18 South Park, London </h4>
+            </a>
+        </div>
+        <div class="image">
+            <img src="assets/images/footer-puppy.png" alt="">
+        </div>
+    </footer>
+    <script src="pages/pets/header.js"></script>
+    <script src="pages/main/scripts/pets-list.js"></script>
+    <script src="pages/pets/script.js" type=""></script>
+</body>
+
+</html>

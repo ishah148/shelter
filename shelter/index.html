@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div class="psevdo-nav"></div>
     <main>
         <section class="start-screen">
             <header>
@@ -19,9 +20,13 @@
                     <p class="logo-subtitle">Shelter for pets in Boston</p>
                 </h1>
                 <nav>
+                    <!-- <h1 class="logo nav">
+                        <p class="logo-title">Cozy House</p>
+                        <p class="logo-subtitle">Shelter for pets in Boston</p>
+                    </h1> -->
                     <p class="paragraph-l current-page"> About the shelter</p>
-                    <p class="paragraph-l"><a href="pages/pets/index.html">Our pets</a></p>
-                    <p class="paragraph-l"><a href="#donation">Help the shelter</a></p>
+                    <p class="paragraph-l"><a href="pets.html">Our pets</a></p>
+                    <p class="paragraph-l"><a href="#help">Help the shelter</a></p>
                     <p class="paragraph-l"> <a href="#footer"> Contacts</a></p>
                 </nav>
                 <div class="hamburger">
@@ -39,9 +44,9 @@
                     <p class="paragraph-l">We offer to give a chance to a little and nice puppy with an extremely wide
                         and
                         open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                        <form action="#pets">
-                            <button> Make a friend</button>
-                        </form>
+                    <form action="#pets">
+                        <button> Make a friend</button>
+                    </form>
                 </div>
                 <div class="backgroud-img">
 
@@ -64,69 +69,35 @@
         <section class="pets" id="pets">
             <h3>Our friends who <br>
                 are looking for a house</h3>
-            <div class="content-wrapper">
-
-                <div class="card">
-                    <div class="image"><img src="assets/images/pets/pets-katrine.png" alt=""></div>
-                    <p class="pets-card-title">Katrine</p>
-                    <button class="button-primary">Learn more</button>
-                    
-                </div>
-                <div class="card">
-                    <div class="image"><img src="assets/images/pets/pets-jennifer.png" alt=""></div>
-                    <p class="pets-card-title">Jennifer</p>
-                    <button class="button-primary">Learn more</button>
-                    
-                </div>
-                <div class="card">
-                    <div class="image"><img src="assets/images/pets/pets-woody.png" alt=""></div>
-                    <p class="pets-card-title">Woody</p>
-                    <button class="button-primary">Learn more</button>
-                    
+            <div class="content-container">
+                <div class="content-wrapper">
+                    <!-- My cards -->
                 </div>
                 <div class="modal-window">
-                    <div class="image">
-                        <img src="assets/images/pets-jennifer.png" alt="">
-                    </div>
-                    <div class="content">
-                        <div class="name-wrapper">
-                            <h3>Jennifer</h3>
-                            <h4>Dog - Labrador</h4>
-                        </div>
-                        <h5>Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever
-                            home. This girl really enjoys being able to go outside to run and play, but won't hesitate
-                            to play up a storm in the house if she has all of her favorite toys.</h5>
-                        <div class="list">
-                            <ul>
-                                <li><b>Age:</b>  2 months</li>
-                                <li><b>Inoculations:</b> none</li>
-                                <li><b>Diseases:</b> none</li>
-                                <li><b>Parasites:</b> none</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <button class="button-round">
-                        <svg>
-                            <use xlink:href="assets/icons/arrow.svg#cross"></use>
-                        </svg>
-                    </button>
                 </div>
-                <div class="button-wrapper">
+                <div class="button-wrapper button-wrapper--left ">
+
                     <button class="button-arrow left">
                         <svg>
                             <use xlink:href="assets/icons/arrow.svg#arrow"></use>
                         </svg>
                     </button>
+                </div>
+
+                <div class="button-wrapper button-wrapper--right">
                     <button class="button-arrow right">
                         <svg>
                             <use xlink:href="assets/icons/arrow.svg#arrow"></use>
                         </svg>
                     </button>
                 </div>
+
             </div>
-            <button class="button-primary">Get to know the rest</button>
+
+
+            <button class="button-primary"><a href="pets.html">Get to know the rest</a></button>
         </section>
-        <section class="help">
+        <section class="help" id="help">
             <h3>How you can help <br> our shelter</h3>
             <div class="list">
                 <div class="svg-wrapper">
@@ -208,7 +179,7 @@
                     <svg class="card-svg">
                         <use xlink:href="assets/icons/sprite_help.svg#credit-card"></use>
                     </svg>
-                    <h4 class="card-donation">8380 2880 8028 8791 7435</h4>
+                    <h4 class="card-donation"> <a href="#"> 8380 2880 8028 8791 7435</a></h4>
                 </div>
                 <p class="donation-description">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing
                     elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et

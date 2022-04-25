@@ -35,6 +35,10 @@ html {
 body {
     max-width: var(--primary-width);
     margin: auto;
+    overflow-y: auto;
+    &.stop{
+        // overflow-y: hidden;
+    }
     @media (max-width: $breakpoint-tablet) {
         overflow-y: overlay;
         // width: 100vw;

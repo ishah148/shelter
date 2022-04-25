@@ -41,7 +41,7 @@
             column-gap: 74px;
             row-gap: 52px;
         }
-        @media (max-width: $breakpoint-mobile) {
+        @media (max-width: calc(#{$breakpoint-mobile} + 150px)) {
             width: 100%;
             height: auto;
             grid-template-areas:
@@ -63,6 +63,7 @@
             height: 113px;
             @media (max-width: $breakpoint-mobile) {
                 height: 87px;
+                padding-left: 10px;
             }
 
             .help-svg {
@@ -70,6 +71,10 @@
                 fill: $svg-color;
                 max-width: 60px;
                 max-height: 60px;
+                @media (max-width: $breakpoint-mobile) {
+                    max-width: 50px;
+                    max-height: 50px;
+                }
             }
         }
     }

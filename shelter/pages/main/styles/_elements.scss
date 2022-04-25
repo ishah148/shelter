@@ -1,5 +1,5 @@
 @import "_variables.scss";
-a{
+a {
     text-decoration: none;
     color: $color-dark-3xl;
 }
@@ -19,6 +19,7 @@ button {
     border: 2px solid $color-primary;
     border-radius: 100px;
     background: $color-primary;
+    transition: all 0.15s ease;
     &:hover {
         background: #fddcc4;
     }
@@ -26,11 +27,12 @@ button {
 .button-wrapper {
     width: 103%;
     display: flex;
-    position: absolute;
+    // position: absolute;
     justify-content: space-between;
+    order: 1;
     @media (max-width: $breakpoint-mobile) {
         position: static;
-        width: 190px;       
+        width: 190px;
     }
 
     .button-arrow {
@@ -40,6 +42,7 @@ button {
         width: 52px;
         height: 52px;
         background: none;
+        transition: all 0.15s ease;
         &.invalid {
             border: 2px solid $color-dark-s;
             color: $color-dark-s;
@@ -48,12 +51,53 @@ button {
             }
         }
         // position: absolute;
-        &:hover{
+        &:hover {
             background-color: $color-primary-light;
         }
         svg {
             width: 14px;
             height: 6px;
+        }
+    }
+}
+
+.button-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    @media (max-width: $breakpoint-mobile) {
+        position: relative;
+    }
+
+    &.left {
+        left: 0;
+        transform: rotate(180deg);
+        &:hover {
+            transform: translateY(-3px) rotate(180deg);
+            box-shadow: 0px 0px 15px -3px $color-dark-s;
+        }
+        @media (max-width: $breakpoint-tablet) {
+            // left: -10px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            // transform: rotate(180deg) translate(53px, -20px);
+        }
+    }
+
+    &.right {
+        right: 0;
+        &:hover {
+            box-shadow: 0px 0px 15px -3px $color-dark-s;
+            transform: translateY(-3px);
+        }
+        @media (max-width: $breakpoint-tablet) {
+            // right: -10px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            // transform: translate(55px, -32px);
         }
     }
 }
@@ -65,6 +109,7 @@ button {
     background: none;
     width: 52px;
     height: 52px;
+    transition: all 0.15s ease;
     &.invalid {
         border: 2px solid $color-dark-s;
         color: $color-dark-s;
@@ -80,15 +125,15 @@ button {
     }
 }
 
-
 .hamburger {
     width: 30px;
     height: 30px;
     border: 1px solid violet;
     display: none;
-    @media (max-width: calc(#{$breakpoint-mobile + 130px})) {
+    user-select: none;
+    @media (max-width: calc(#{$breakpoint-mobile + 130px +68px})) {
         display: flex;
-        z-index: 2;
+        z-index: 5;
     }
 
     &.active {
@@ -114,45 +159,58 @@ button {
     }
 }
 
-.modal-window{
+.modal-window {
     width: 75%;
     height: 500px;
     position: absolute;
     background: $color-light-s;
-    display: none;
-    // display: flex;
+    // display: none;
+    z-index: 6;
     justify-content: space-around;
     align-items: center;
-    &.open{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 0.1s;
+    transform: scale(0.0001);
+    // margin: 0 auto;
+    &.open {
         display: flex;
+        transform: scale(1);
     }
-    .image{
+    
+    .image {
+        @media (max-width: $breakpoint-mobile) {
+            display: none;
+        }
         // flex: 1 1 300px;
         width: 40%;
         // height: 500px;
-        img{
+        img {
             width: 100%;
-            height: 100%
+            height: 100%;
         }
     }
-    
-    .content{
+
+    .content {
         display: flex;
         flex-direction: column;
         height: 80%;
         width: 40%;
         align-items: start;
         justify-content: space-around;
-        ul{
+        ul {
             padding-left: 20px;
-            li{
-                &::marker{
+            li {
+                &::marker {
                     color: $color-primary;
                 }
             }
         }
     }
-    .button-round{
+    .button-round {
         position: absolute;
         width: 52px;
         height: 52px;
@@ -161,9 +219,24 @@ button {
         align-items: center;
         right: -45px;
         top: -45px;
-        svg{
+        svg {
             width: 12px;
             height: 12px;
         }
+    }
+}
+
+.psevdo-nav {
+    // position: absolute;
+    position: fixed;
+    display: none;
+    left: 0;
+    &.active {
+        z-index: 5;
+        background: black;
+        opacity: 0.5;
+        height: 100%;
+        width: 100%;
+        display: block;
     }
 }

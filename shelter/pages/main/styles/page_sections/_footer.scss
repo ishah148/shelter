@@ -17,6 +17,8 @@ footer {
     }
     @media (max-width: $breakpoint-mobile) {
         gap: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     h3 {
         color: #ffffff;
@@ -42,6 +44,7 @@ footer {
         width: 278px;
         height: 234px;
         flex-direction: column;
+        align-items: center;
         justify-content: space-between;
         @media (max-width: $breakpoint-mobile) {
             justify-content:normal;
@@ -54,12 +57,16 @@ footer {
             flex-direction: row;
             align-items: center;
             gap: 20px;
+            @media (min-width: 500px) {
+                align-self: flex-start;
+            }
+            
         }
     }
 
     .location {
         width: 302px;
-        height: 234px;
+        height: 238px; 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -74,7 +81,9 @@ footer {
             width: 98%;
             height: 90px;
             @media (max-width: $breakpoint-mobile) {
-                height: 70px;
+                height: 64px;
+                max-width: 270px;
+                transform: translate(1px,-7px);
             }
         }
 
@@ -82,6 +91,13 @@ footer {
             display: flex;
             flex-direction: row;
             align-items: center;
+            gap: 10px;
+            @media (max-width: $breakpoint-mobile) {
+                gap: 0;
+                .contacts-svg{
+                    transform: translate(-4px, 7px);
+                }
+            }
         }
     }
 

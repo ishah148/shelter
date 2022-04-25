@@ -5,8 +5,8 @@
 });
  */
 
- sass ./pages/pets/style.scss ./pages/pets/style.css --watch
- sass ./pages/main/styles/style.scss ./pages/main/styles/style.css --watch
+ sass shelter/pages/pets/style.scss shelter/pages/pets/style.css --watch
+ sass shelter/pages/main/styles/style.scss shelter/pages/main/styles/style.css --watch
 
 
 span{
@@ -233,3 +233,86 @@ span{
       //         }
       //     }
       // }
+
+
+
+
+
+
+
+
+      <!-- <div class="card">
+      <div class="image"><img src="assets/images/pets/pets-katrine.png" alt=""></div>
+      <p class="pets-card-title">Katrine</p>
+      <button class="button-primary">Learn more</button>
+      
+  </div>
+  <div class="card">
+      <div class="image"><img src="assets/images/pets/pets-jennifer.png" alt=""></div>
+      <p class="pets-card-title">Jennifer</p>
+      <button class="button-primary">Learn more</button>
+      
+  </div>
+  <div class="card">
+      <div class="image"><img src="assets/images/pets/pets-woody.png" alt=""></div>
+      <p class="pets-card-title">Woody</p>
+      <button class="button-primary">Learn more</button>
+      
+  </div> -->
+  <!-- <div class="modal-window">
+      <div class="image">
+          <img src="assets/images/pets-jennifer.png" alt="">
+      </div>
+      <div class="content">
+          <div class="name-wrapper">
+              <h3>Jennifer</h3>
+              <h4>Dog - Labrador</h4>
+          </div>
+          <h5>Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever
+              home. This girl really enjoys being able to go outside to run and play, but won't hesitate
+              to play up a storm in the house if she has all of her favorite toys.</h5>
+          <div class="list">
+              <ul>
+                  <li><b>Age:</b>  2 months</li>
+                  <li><b>Inoculations:</b> none</li>
+                  <li><b>Diseases:</b> none</li>
+                  <li><b>Parasites:</b> none</li>
+              </ul>
+          </div>
+      </div>
+      <button class="button-round">
+          <svg>
+              <use xlink:href="assets/icons/arrow.svg#cross"></use>
+          </svg>
+      </button>
+  </div> -->
+
+
+
+
+
+
+  // &:nth-child(3){
+    //     display: none;
+    // }
+    // @media (max-width: $breakpoint-tablet) {
+    //     &:nth-child(3) {
+    //         display: none;
+    //     }
+    // }
+
+    // @media (max-width: calc(#{$breakpoint-mobile} + 190px)) {
+    //     &:nth-child(2) {
+    //         display: none;
+    //     }
+    // }
+
+
+    // if (direction === 'prew') {
+      //     let temp = new Set(pets.slice(min - 3, max))
+      //     if (temp.size !== pets.slice(min - 3, max).length) {
+      //         pets = shuffleArr(pets)
+      //         removeCards()
+      //         showCards(direction)
+      //         return
+      //     }

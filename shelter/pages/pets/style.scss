@@ -3,34 +3,52 @@
 @import "../main/styles/_elements.scss";
 // @import "../main/styles/page_sections/_start-screen.scss";
 
-
 *::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
 }
 *::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: #e1e2e1;
-  }
+}
 * {
     box-sizing: border-box;
-    
 }
 :root {
     --example: green;
     scroll-behavior: smooth;
     --primary-width: 1280px;
     --header-width: 85%;
+    --body-height:100%;
+    --body-width:100%;
 }
 html {
     background: $color-light-s;
     // background: rgb(random(255), random(255), random(255));
+    
 }
 body {
     max-width: var(--primary-width);
     overflow: overlay;
     margin: auto;
-}
+    overflow-y: auto;
+    &.stop{
+        overflow-y: hidden;
+    }
 
+}
+// .psevdo-nav{
+//     position: absolute;
+//     display: none;
+//     &.active{
+//         z-index: 1;
+//         background: black;
+//         opacity: 0.5;
+//         height: 100%;
+//         width: 100%;
+//         display: block;
+//     }
+// }
 .pseudo-header {
     width: 100%;
     height: 120px;
@@ -46,10 +64,20 @@ header {
     height: 120px;
     transition-property: height;
     transition-duration: 0.3s;
-
+    @media (max-width: calc(#{$breakpoint-decktop} - 190px)) {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    @media (max-width: $breakpoint-mobile) {
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 40px;
+        // justify-content: flex-start;
+        align-items: center;
+    }
     &.header__fixed {
         position: fixed;
-        z-index: 4;
+        z-index: 5;
         opacity: 0.96;
         height: 80px;
         top: 0;
@@ -69,6 +97,12 @@ header {
         }
     }
     nav {
+        top: -100px;
+        right: 78px;
+        @media (max-width: $breakpoint-mobile) {
+
+            transform: scale(0.0001) translateX(200px);
+        }
         p {
             margin: 0;
             color: $color-dark-l;
@@ -97,23 +131,36 @@ header {
     .hamburger {
         right: 77px;
         top: 38%;
+        @media (max-width: $breakpoint-mobile) {
+            position: absolute;
+            margin-right: 14%;
+            right: -30px;
+        }
     }
+    
 }
 
 main {
     min-height: 1342px;
     padding-top: 80px;
-    padding: 80px 40px 0px 40px;
+    padding: 80px 40px 40px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
     background: $color-light-l;
     row-gap: 60px;
+    // padding-bottom: 100px;
     @media (max-width: $breakpoint-tablet) {
+        min-height: 1733px;
         row-gap: 30px;
+        padding-bottom: 70px;
     }
-
+    @media (max-width: $breakpoint-mobile) {
+        min-height: 1649px;
+        padding: 42px 10px;
+        row-gap: 40px;
+    }
     h3 {
         text-align: center;
     }
@@ -126,6 +173,7 @@ main {
         flex-wrap: wrap;
         gap: 30px 40px;
         position: relative;
+        transition: all 0.3s;
         .card {
             width: 270px;
             height: 435px;
@@ -133,6 +181,16 @@ main {
             flex-direction: column;
             background: $color-light-s;
             gap: 30px;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            &:hover {
+                box-shadow: 5px 5px 15px 5px $color-dark-s;
+                transform: scale(1.03);
+                background: white;
+                cursor: pointer;
+                .button-primary {
+                    background: #fddcc4;
+                }
+            }
 
             .image {
                 width: 270px;
@@ -172,15 +230,32 @@ main {
 
     .navigation {
         // position: relative;
-        margin-top: 28px;
         display: flex;
         justify-content: space-between;
         width: 340px;
         height: 52px;
+        transition: all 0.3s;
+        @media (max-width: $breakpoint-tablet) {
+            transform: translateY(8px);
+        }
+        @media (max-width: $breakpoint-mobile) {
+            width: 300px;
+            transform: translateY(0px);
+
+        }
         button {
-            position: static;
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        position: static;
+            &:hover {
+                box-shadow: 0px 0px 15px -3px $color-dark-s;
+                transform: translateY(-3px);
+                &.current {
+                    background: $color-primary;
+                }
+            }
         }
     }
+    
 }
 
 // @import url(../main/styles/page_sections/_footer.scss);
